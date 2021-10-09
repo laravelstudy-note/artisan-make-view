@@ -143,9 +143,12 @@ class ViewMakeCommand extends Command
      */
     protected function getPath($directory = false)
     {
-        return sprintf('%s\\%s.%s',
+
+		$separator = DIRECTORY_SEPARATOR;
+
+        return sprintf('%s'.$separator.'%s.%s',
             config('view.paths')[$this->option('view-path')],
-            str_replace('.', '\\', $this->argument('name') . ($directory ? '\\' . $directory : '')),
+            str_replace('.', $separator, $this->argument('name') . ($directory ? $separator . $directory : '')),
             $this->option('extension')
         );
     }
