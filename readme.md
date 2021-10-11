@@ -2,7 +2,14 @@
 
 ## Introduction
 
+<<<<<<< Updated upstream
 > Quickly create views and view resources from the Artisan console, saving a surprising amount of time.
+=======
+```
+$ composer config repositories.laravelstudy-note/artisan-make-view vcs https://github.com/laravelstudy-note/artisan-make-view
+$ composer require laravelstudy-note/artisan-make-view@dev
+```
+>>>>>>> Stashed changes
 
 ## Code Samples
 
