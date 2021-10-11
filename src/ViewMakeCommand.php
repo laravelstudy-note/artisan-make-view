@@ -98,7 +98,7 @@ class ViewMakeCommand extends Command
         $directory = $this->filesystem->dirname($path);
 
         if (! $this->filesystem->isDirectory($directory)) {
-            $this->filesystem->makeDirectory($directory);
+			$this->filesystem->makeDirectory($directory, 0755, true);
 
             $this->info(sprintf('%s directory created!', basename($directory)));
         }
